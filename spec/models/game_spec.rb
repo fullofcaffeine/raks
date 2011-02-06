@@ -2,6 +2,15 @@ require 'spec_helper.rb'
 
 describe Game do
 
+  context 'Associations' do
+    it 'should belong_to a user_gesture' do
+      lambda { Game.new.user_gesture }.should_not raise_error
+    end
+    it 'should belong_to a cpu_gesture' do
+      lambda { Game.new.cpu_gesture }.should_not raise_error
+    end
+  end
+
   it 'should accept nested attributes for user_gesture' do
     Game.instance_methods.include?("user_gesture_attributes=").should == true
   end
