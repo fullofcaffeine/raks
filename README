@@ -1,6 +1,6 @@
 Rails pAper rocK Scissors
 
-A simple implementation of the popular Rock-Papar-Scissors game in Rails, using a outside-in test methodology.
+A simple implementation of the popular Rock-Papar-Scissors game in Rails, using an outside-in test methodology.
 
 Tools used:
  * Cucumber
