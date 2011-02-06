@@ -1,2 +1,8 @@
-
+<% form_for @game do |f| %>
+  <%= f.label 'Take your gesture:' %>
+  <% f.fields_for :user_gesture,@gesture do |g| %>
+    <%= g.select :gesture_type, Gesture::GESTURE_TYPE_LABELS.map { |k,v| [v,k] }%>
+  <% end %>
+  <%= f.submit 'Play game' %>
+<% end %>
 

@@ -4,7 +4,7 @@ Feature: Rock, Paper, Scissors
   As a bored individual
   I want to play Rock, Paper, Scissors!
 
-  Permutations reference:
+ Permutations reference:
     | User gesture | CPU gesture | expected result |
     |    paper     |    rock     |     User wins   |
     |    paper     |    paper    |       draw      |
@@ -20,71 +20,72 @@ Feature: Rock, Paper, Scissors
 
   Scenario: User chooses paper, CPU chooses rock
     Given I am on the new game page
-    When I select "Paper" from "gestures"
+    When I select "Paper" from "game_user_gesture_attributes_gesture_type"
     And the CPU chooses "rock"
-    And I click "Play"
+    And I press "Play"
     Then I should be on the results page
     And I should see "You won!"
 
+  @pending  
   Scenario: User chooses paper, CPU chooses paper
     Given I am on the new game page
-    When I select "Paper" from "gestures"
+    When I select "Paper" from "game_user_gesture_attributes_gesture_type"
     And the CPU chooses "paper"
-    And I click "Play"
+    And I press "Play"
     Then I should be on the results page
     And I should see "Draw!"
 
   Scenario: User chooses paper, CPU chooses scissor
     Given I am on the new game page
-    When I select "Paper" from "gestures"
+    When I select "Paper" from "game_user_gesture_attributes_gesture_type"
     And the CPU chooses "scissor"
-    And I click "Play"
+    And I press "Play"
     Then I should be on the results page
     And I should see "You lost :("
 
   Scenario: User chooses rock, CPU chooses paper
     Given I am on the new game page
-    When I select "Rock" from "gestures"
+    When I select "Rock" from "game_user_gesture_attributes_gesture_type"
     And the CPU chooses "paper"
-    And I click "Play"
+    And I press "Play"
     Then I should be on the results page
     And I should see "You lost :("
 
   Scenario: User chooses rock, CPU chooses rock
     Given I am on the new game page
-    When I select "Rock" from "gestures"
+    When I select "Rock" from "game_user_gesture_attributes_gesture_type"
     And the CPU chooses "rock"
-    And I click "Play"
+    And I press "Play"
     Then I should be on the results page
     And I should see "Draw!"
 
 
   Scenario: User chooses rock, CPU chooses scissor 
     Given I am on the new game page
-    When I select "Rock" from "gestures"
+    When I select "Rock" from "game_user_gesture_attributes_gesture_type"
     And the CPU chooses "scissor"
-    And I click "Play"
+    And I press "Play"
     Then I should be on the results page
     And I should see "You won!"
 
   Scenario: User chooses scissor, CPU chooses paper
     Given I am on the new game page
-    When I select "Scissor" from "gestures"
+    When I select "Scissor" from "game_user_gesture_attributes_gesture_type"
     And the CPU chooses "paper"
     Then I should be on the results page
     And I should see "Your won!"
 
   Scenario: User chooses scissor, CPU chooses rock
-    Given I am on the new page page
-    When I select "Scissor" from "gestures"
+    Given I am on the new page
+    When I select "Scissor" from "game_user_gesture_attributes_gesture_type"
     And the CPU chooses "Rock"
-    Then I should be on the "results' page
+    Then I should be on the results page
     And I should see "You lost :("
 
   Scenario: User chooses scissor, CPU chooses scissor 
     Given I am on the new game page
-    When I select "Scissor" from "gestures"
-    And I click "Play"
+    When I select "Scissor" from "game_user_gesture_attributes_gesture_type"
+    And I press "Play"
     Then I should be on the results page
     And I should see "Draw!"
 

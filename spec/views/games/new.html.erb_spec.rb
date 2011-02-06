@@ -4,12 +4,13 @@ require 'spec_helper'
 describe 'games/new.html.erb' do
 
   it 'renders a form to play a new game' do
-
+    assigns[:game] = Game.new
+    assigns[:gesture] = Gesture.new 
     render
-    response.should have_selector("form",:method => "post",:path   => games_path) do |form|
-      form.should have_selector("input", :type => 'text', :name => "game[user_hand]")
-      form.should have_selector("input", :type => 'submit')
+    response.should have_tag("form", :action => games_path, :method => 'post') do |form|
+      form.should have_tag("select[name='game[user_gesture_attributes][gesture_type]']")
+      form.should have_tag("input[type='submit']")
     end
   end
-
 end
+
