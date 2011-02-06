@@ -11,7 +11,6 @@ class GamesController < ApplicationController
   end
 
   def show
-    debugger
     @game = Game.find(params[:id])
   end
 end

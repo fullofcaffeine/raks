@@ -30,7 +30,6 @@ class Game < ActiveRecord::Base
       false => 'You lost :(',
       nil => 'Draw!'
     }
-    debugger
     legend[matrix[self.user_gesture.gesture_type][self.cpu_gesture.gesture_type]]
   end
 
