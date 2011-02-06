@@ -1,0 +1,31 @@
+.DS_Store
+# DB Schema files
+db/schema.rb
+# Log files
+log/*.log
+log/
+.bundle/*
+tmp/
+# Temporary files
+tmp/**/*
+uploads/*
+log/newrelic_agent.3000.log
+public/system/accounts/*
+public/system/users/*
+public/system/system/*
+public/system/logos/*
+public/system/icons/*
+public/system/photos/*
+public/system/extensions/*
+public/.DS_Store
+public/sitemap.xml
+public/javascripts/cache/*
+public/stylesheets/cache/*
+public/images/connectors/*
+lib/words.txt
+onelogin_key.txt
+\#*#
+*~
+.#*
+.bundle
+public/javascripts/all.js
