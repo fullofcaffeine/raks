@@ -9,7 +9,9 @@ class GamesController < ApplicationController
     @game.save
     redirect_to game_path(@game)
   end
+
   def show
+    debugger
     @game = Game.find(params[:id])
   end
 end

@@ -5,7 +5,7 @@ module NavigationHelpers
   #
   # step definition in web_steps.rb
   #
-  def path_to(page_name)
+  def path_to(page_name,id=nil)
     case page_name
 
     when /the home\s?page/
@@ -17,6 +17,8 @@ module NavigationHelpers
     #   when /^(.*)'s profile page$/i
     #     user_profile_path(User.find_by_login($1))
     when /the results page/
+      game_path(:id => 1)
+      
 
     when /the new game page/
       new_game_path

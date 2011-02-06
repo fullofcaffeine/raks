@@ -23,7 +23,7 @@ Feature: Rock, Paper, Scissors
     When I select "Paper" from "game_user_gesture_attributes_gesture_type"
     And the CPU chooses "rock"
     And I press "Play"
-    Then I should be on the results page
+    Then I should be on the results page 
     And I should see "You won!"
 
   @pending  
@@ -72,19 +72,22 @@ Feature: Rock, Paper, Scissors
     Given I am on the new game page
     When I select "Scissor" from "game_user_gesture_attributes_gesture_type"
     And the CPU chooses "paper"
+    And I press "Play"
     Then I should be on the results page
-    And I should see "Your won!"
+    And I should see "You won!"
 
   Scenario: User chooses scissor, CPU chooses rock
-    Given I am on the new page
+    Given I am on the new game page
     When I select "Scissor" from "game_user_gesture_attributes_gesture_type"
     And the CPU chooses "Rock"
+    And I press "Play"
     Then I should be on the results page
     And I should see "You lost :("
 
   Scenario: User chooses scissor, CPU chooses scissor 
     Given I am on the new game page
     When I select "Scissor" from "game_user_gesture_attributes_gesture_type"
+    And the CPU chooses "scissor"
     And I press "Play"
     Then I should be on the results page
     And I should see "Draw!"
