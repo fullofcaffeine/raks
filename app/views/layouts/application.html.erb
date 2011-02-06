@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns=" http://www.w3.org/ 1999/xhtml" xml:lang="en" lang="en">	
+<head>	
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <%= javascript_include_tag 'cufon-yui' %>
+  <%= javascript_include_tag 'custom-font' %>
+  <%= stylesheet_link_tag 'style' %>
+  <%= stylesheet_link_tag 'buttons' %>
+  <script type="text/javascript">
+			Cufon.replace('h1'); // Works without a selector engine
+  </script>
+  
+</head>
+<body>
+  <div id="wrapper">
+    <div id="header">
+      <h1>raks! - Rails pAper rocK Scissors</h1>
+    </div>
+    <div id="content">
+      <%= yield %>
+      <div style="clear:both"></div>
+    </div>
+    <div id="footer">
+      <span>2011 - Marcelo de Moraes Serpa</span>
+    </div>
+  </div>
+</body>
+</html>
+

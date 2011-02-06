@@ -1,9 +1,14 @@
 <h1><%= @game.result %></h1>
+<div style="margin:10px 0 10px 30px;float:left">
 <p>
   <ul>
-    <li>You chose <%= @game.user_gesture %></li>
-    <li>The CPU has chosen <%= @game.cpu_gesture %></li>
+    <li>You chose <strong><%= @game.user_gesture %></strong></li>
+    <li>The CPU has chosen <strong><%= @game.cpu_gesture %></strong></li>
   </ul>
+  </p>
+</div>
+<p style="float: left; margin: 16px 0px 0px 30px;">
+  <%= link_to '<span>Play again!</span>', new_game_path, :class => 'button rect_button' %>
 </p>
-
+<div style="clear:left"></div>
 

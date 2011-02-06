@@ -44,7 +44,13 @@ describe 'games/show.html.erb' do
     render
     response.should have_tag('li',:text => 'The CPU has chosen Rock')
   end
-  it 'should show a "New Game" button' do
+  it 'should show a "Play again!" button' do
+    game = Game.make :draw
+    assigns[:game] = game
+    render
+    response.should have_tag('a') do |btn| 
+      btn.should have_tag('span',:text => 'Play again!')
+    end
   end
 
 end

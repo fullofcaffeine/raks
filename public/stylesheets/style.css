@@ -1,0 +1,28 @@
+* {
+  margin:0;
+  padding:0;
+}
+
+body {
+  color: #4b555c;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: arial, helvetica, sans-serif;
+}
+
+div#wrapper {
+  margin:10px; 
+  margi
+}
+
+div#header {
+  margin-bottom:10px;
+}
+
+div#content {
+  margin:30px 0px 30px 10px;
+}
+
+div#footer {
+  font-size:smaller;
+}

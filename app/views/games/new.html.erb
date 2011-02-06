@@ -1,8 +1,11 @@
 <% form_for @game do |f| %>
-  <%= f.label 'Take your gesture:' %>
+<div style="float:left">
+<%= f.label 'Take your gesture:' %>
   <% f.fields_for :user_gesture,@gesture do |g| %>
     <%= g.select :gesture_type, Gesture::GESTURE_TYPE_LABELS.map { |k,v| [v,k] }%>
   <% end %>
-  <%= f.submit 'Play' %>
+</div>
+<% content_tag :button, :type => 'submit', :class => 'button rect_button', :style => 'float:left;margin-left:5px' do %>
+  <span>Play</span>
+  <%end%>
 <% end %>
-
