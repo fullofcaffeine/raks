@@ -6,7 +6,7 @@ require 'spec/autorun'
 require 'spec/rails'
 
 # Uncomment the next line to use webrat's matchers
-require 'webrat/integrations/rspec-rails'
+#require 'webrat/integrations/rspec-rails'
 #
 #Machinist blueprints
 require File.join(RAILS_ROOT, 'spec', 'blueprints')

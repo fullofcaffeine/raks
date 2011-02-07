@@ -8,3 +8,11 @@ Tools used:
  * Machinist
  * Rails 2.3.8
  * SQLite3
+
+ To run:
+  bundle install
+  script/server
+
+  Tests:
+   $ cucumber 
+   $ rake spec
