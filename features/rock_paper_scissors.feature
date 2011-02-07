@@ -26,7 +26,6 @@ Feature: Rock, Paper, Scissors
     Then I should be on the results page 
     And I should see "You won!"
 
-  @pending  
   Scenario: User chooses paper, CPU chooses paper
     Given I am on the new game page
     When I select "Paper" from "game_user_gesture_attributes_gesture_type"
