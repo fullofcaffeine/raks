@@ -6,7 +6,7 @@ Tools used:
  * Cucumber
  * rSpec
  * Machinist
- * Rails 2.3.8
+ * Rails 2.3.10
  * SQLite3
 
  To run:
