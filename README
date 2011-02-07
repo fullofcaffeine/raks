@@ -3,11 +3,12 @@ Rails pAper rocK Scissors
 A simple implementation of the popular Rock-Papar-Scissors game in Rails, using a outside-in development methodology.
 
 Tools used:
- * Cucumber
- * rSpec
- * Machinist
  * Rails 2.3.10
- * SQLite3
+ * Cucumber 0.10.0
+ * Capybara 0.4.1.1
+ * rSpec 1.3.0
+ * Machinist 1.0.6
+ * SQLite3 
 
  To run:
   bundle install
